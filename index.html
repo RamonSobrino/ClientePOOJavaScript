@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="#" onclick="mostrarHome()">Home</a>
+        <div id="opciones-servidor">
+            <a href="#" onclick="mostrarGeneral()">Obtener infomación general</a>
+            <button class="dropdown-btn">Obtener entidades
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <button class="dropdown-btn">LocalBusiness
+                    <i class="fa fa-sub-caret-down"></i>
+                </button>
+                <div class="dropdown-sub-container">
+                    <a href="#" onclick="mostrarLocalBusinessTodos()">Todos</a>
+                    <a href="#" onclick="mostrarLocalBusinessId()">Por Id</a>
+                </div>
+                <button class="dropdown-btn">FoodEstablishment
+                    <i class="fa fa-sub-caret-down"></i>
+                </button>
+                <div class="dropdown-sub-container">
+                    <a href="#" onclick="mostrarFoodEstablishmentTodos()">Todos</a>
+                    <a href="#" onclick="mostrarFoodEstablishmentId()">Por Id</a>
+                </div>
+            </div>
+            <button class="dropdown-btn">Actualizar entidades
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#" onclick="mostrarLocalBusinessActualizar()">LocalBusiness</a>
+                <a href="#" onclick="mostrarFoodEstablishmentActualizar()">FoodEstablishment</a>
+            </div>
+            <button class="dropdown-btn">Agregar entidades
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#" onclick="mostrarLocalBusinessAgregar()">LocalBusiness</a>
+                <a href="#" onclick="mostrarFoodEstablishmentAgregar()">FoodEstablishment</a>
+            </div>
+            <button class="dropdown-btn">Borrar entidades
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#" onclick="mostrarLocalBusinessDelete()">LocalBusiness</a>
+                <a href="#" onclick="mostrarFoodEstablishmentDelete()">FoodEstablishment</a>
+            </div>
+        </div>
+    </div>
+    <nav class="topnav">
+        <form name="servidores-form" onclick="mostrarOpcionesServidor()">
+            <div>
+                <label for="Python">Python</label>
+                <input type="radio" name="servidor" value="3002" id="Python">
+            </div>
+            <div>
+                <label for="Php">Php</label>
+                <input type="radio" name="servidor" value="3001" id="Php">
+            </div>
+            <div>
+                <label for="Node-js">Node-js</label>
+                <input type="radio" name="servidor" value="3000" id="Node-js">
+            </div>
+        </form>
+
+    </nav>
+
+    <div class="main">
+
+        <h1>Cliente para Programacion Orientada a Objetos</h1>
+
+        <div class="panel" id="home">
+            <h2>En esta página se obtiene la informacion de Home</h2>
+        </div>
+        <div class="panel ocultos" id="info-general">
+            <h2>En esta página se obtiene la informacion general</h2>
+            <div id="general-contenidos"></div>
+        </div>
+        <div class="panel ocultos" id="LocalBusiness-todos">
+            <h2>En esta página se obtiene la LocalBusiness Todos</h2>
+            <div id="LocalBusiness-todos-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="LocalBusiness-id">
+            <h2>En esta página se obtiene la LocalBusiness Id</h2>
+            <div id="LocalBusiness-formulario-contenido">
+                <label for="Node-js">Id</label>
+                <input type="number" id="id-LocalBusiness">
+                <button type="button" onclick="validateLocalBusinessId()">Buscar</button>
+            </div>
+            <div id="LocalBusiness-id-contenido"></div>
+
+        </div>
+        <div class="panel ocultos" id="FoodEstablishment-todos">
+            <h2>En esta página se obtiene la FoodEstablishment Todos</h2>
+            <div id="FoodEstablishment-todos-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="FoodEstablishment-id">
+            <h2>En esta página se obtiene la FoodEstablishment Id</h2>
+            <div id="FoodEstablishment-formulario-contenido">
+                <label for="Node-js">Id</label>
+                <input type="number" id="id-FoodEstablishment">
+                <button type="button" onclick="validateFoodEstablishmentId()">Buscar</button>
+            </div>
+            <div id="FoodEstablishment-id-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="LocalBusiness-agregar">
+            <h2>En esta página para agregar LocalBusiness</h2>
+            <div id="LocalBusiness-agregar-form-div">
+
+                <form name="LocalBusiness-agregar-form" class="formularios-ordenados">
+
+                    <label for="name">Name: </label>
+                    <input type="text" name="fname" value=""><br />
+                    <label for="address">Address: </label>
+                    <input type="text" name="address" value=""><br />
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" value=""><br />
+                    <label for="telephone">Telephone: </label>
+                    <input type="text" name="telephone" value=""><br />
+                    <label for="url">Url: </label>
+                    <input type="text" name="url" value=""><br />
+                    <label for="openingHours">OpeningHours: </label>
+                    <input type="text" name="openingHours" value=""><br />
+                    <label for="acceptsReservations">AcceptsReservations: </label>
+                    <input type="checkbox" name="acceptsReservations" value=""><br />
+                    <label for="servesCuisine">ServesCuisine: </label>
+                    <input type="text" name="servesCuisine" value=""><br />
+                    <button type="button" onclick="validateLocalBusinessAdd()">Agregar</button>
+                </form>
+            </div>
+            <div id="LocalBusiness-agregar-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="LocalBusiness-actualizar">
+            <h2>En esta página para actualizar LocalBusiness</h2>
+            <div id="LocalBusiness-actualizar-form-div">
+                <form name="LocalBusiness-actualizar-form" class="formularios-ordenados">
+                    <label for="id">Id: </label>
+                    <input type="number" name="id"><br />
+                    <label for="name">Name: </label>
+                    <input type="text" name="fname" value=""><br />
+                    <label for="address">Address: </label>
+                    <input type="text" name="address" value=""><br />
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" value=""><br />
+                    <label for="telephone">Telephone: </label>
+                    <input type="text" name="telephone" value=""><br />
+                    <label for="url">Url: </label>
+                    <input type="text" name="url" value=""><br />
+                    <label for="openingHours">OpeningHours: </label>
+                    <input type="text" name="openingHours" value=""><br />
+                    <label for="acceptsReservations">AcceptsReservations: </label>
+                    <input type="checkbox" name="acceptsReservations" value=""><br />
+                    <label for="servesCuisine">ServesCuisine: </label>
+                    <input type="text" name="servesCuisine" value=""><br />
+                    <button type="button" onclick="validateLocalBusinessUpdate()">Actualizar</button>
+                </form>
+            </div>
+            <div id="LocalBusiness-actualizar-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="LocalBusiness-borrar">
+            <h2>En esta página para borrar LocalBusiness </h2>
+            <div id="LocalBusiness-formulario-borrar">
+                <label for="Node-js">Id</label>
+                <input type="number" id="id-LocalBusiness-borrar">
+                <button type="button" onclick="borrarLocalBusinessId()">Borrar</button>
+            </div>
+            <div id="LocalBusiness-borrar-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="FoodEstablishment-agregar">
+            <h2>En esta página para agregar FoodEstablishment Todos</h2>
+            <div id="FoodEstablishment-agregar-form-div">
+
+                <form name="FoodEstablishment-agregar-form" class="formularios-ordenados">
+
+                    <label for="name">Name: </label>
+                    <input type="text" name="fname" value=""><br />
+                    <label for="address">Address: </label>
+                    <input type="text" name="address" value=""><br />
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" value=""><br />
+                    <label for="telephone">Telephone: </label>
+                    <input type="text" name="telephone" value=""><br />
+                    <label for="url">Url: </label>
+                    <input type="text" name="url" value=""><br />
+                    <label for="openingHours">OpeningHours: </label>
+                    <input type="text" name="openingHours" value=""><br />
+                    <label for="acceptsReservations">AcceptsReservations: </label>
+                    <input type="checkbox" name="acceptsReservations" value=""><br />
+                    <label for="servesCuisine">ServesCuisine: </label>
+                    <input type="text" name="servesCuisine" value=""><br />
+                    <button type="button" onclick="validateFoodEstablishmentAdd()">Agregar</button>
+                </form>
+            </div>
+            <div id="FoodEstablishment-agregar-contenido"></div>
+
+        </div>
+        <div class="panel ocultos" id="FoodEstablishment-actualizar">
+            <h2>En esta página para actualizar FoodEstablishment</h2>
+            <div id="FoodEstablishment-actualizar-form-div">
+
+                <form name="FoodEstablishment-actualizar-form" class="formularios-ordenados">
+                    <label for="id">Id: </label>
+                    <input type="number" name="id"><br />
+                    <label for="name">Name: </label>
+                    <input type="text" name="fname" value=""><br />
+                    <label for="address">Address: </label>
+                    <input type="text" name="address" value=""><br />
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" value=""><br />
+                    <label for="telephone">Telephone: </label>
+                    <input type="text" name="telephone" value=""><br />
+                    <label for="url">Url: </label>
+                    <input type="text" name="url" value=""><br />
+                    <label for="openingHours">OpeningHours: </label>
+                    <input type="text" name="openingHours" value=""><br />
+                    <label for="acceptsReservations">AcceptsReservations: </label>
+                    <input type="checkbox" name="acceptsReservations" value=""><br />
+                    <label for="servesCuisine">ServesCuisine: </label>
+                    <input type="text" name="servesCuisine" value=""><br />
+                    <button type="button" onclick="validateFoodEstablishmentUpdate()">Actualizar</button>
+                </form>
+            </div>
+            <div id="FoodEstablishment-actualizar-contenido"></div>
+        </div>
+        <div class="panel ocultos" id="FoodEstablishment-borrar">
+            <h2>En esta página para borrar FoodEstablishment</h2>
+            <div id="FoodEstablishment-formulario-borrar">
+                <label for="Node-js">Id</label>
+                <input type="number" id="id-FoodEstablishment-borrar">
+                <button type="button" onclick="borrarFoodEstablishmentId()">Borrar</button>
+            </div>
+            <div id="FoodEstablishment-borrar-contenido"></div>
+        </div>
+    </div>
+
+
+    </div>
+    <script type="application/javascript" src="script.js"></script>
+    <script type="application/javascript" src="LocalBusiness.js"></script>
+    <script type="application/javascript" src="FoodEstablishment.js"></script>
+    <script type="application/javascript" src="scripts-get.js"></script>
+    <script type="application/javascript" src="scripts-delete.js"></script>
+    <script type="application/javascript" src="scripts-post.js"></script>
+    <script type="application/javascript" src="scripts-put.js"></script>
+
+</body>
+
+</html>
