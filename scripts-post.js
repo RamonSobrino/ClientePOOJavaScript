@@ -34,6 +34,7 @@ function validateLocalBusinessAdd(params) {
                         document.getElementById("LocalBusiness-agregar").style.display = 'block';
                         document.getElementById("LocalBusiness-agregar-form-div").style.display = 'none';
                         document.getElementById("LocalBusiness-agregar-contenido").style.display = 'block';
+                        document.forms["LocalBusiness-agregar-form"].reset();
                     }
                 } else {
                     alert(Error(`Código ${http_request.status} recibido.`))
@@ -85,6 +86,7 @@ function validateFoodEstablishmentAdd(params) {
                         document.getElementById("FoodEstablishment-agregar").style.display = 'block';
                         document.getElementById("FoodEstablishment-agregar-form-div").style.display = 'none';
                         document.getElementById("FoodEstablishment-agregar-contenido").style.display = 'block';
+                        document.forms["FoodEstablishment-agregar-form"].reset();
                     }
                 } else {
                     alert(Error(`Código ${http_request.status} recibido.`))

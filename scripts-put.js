@@ -35,6 +35,7 @@ function validateLocalBusinessUpdate(params) {
                         document.getElementById("LocalBusiness-actualizar").style.display = 'block';
                         document.getElementById("LocalBusiness-actualizar-form-div").style.display = 'none';
                         document.getElementById("LocalBusiness-actualizar-contenido").style.display = 'block';
+                        document.forms["LocalBusiness-actualizar-form"].reset();
                     }
                 } else {
                     alert(Error(`Código ${http_request.status} recibido.`))
@@ -87,6 +88,7 @@ function validateFoodEstablishmentUpdate(params) {
                         document.getElementById("FoodEstablishment-agregar").style.display = 'block';
                         document.getElementById("FoodEstablishment-agregar-form-div").style.display = 'none';
                         document.getElementById("FoodEstablishment-agregar-contenido").style.display = 'block';
+                        document.forms["FoodEstablishment-actualizar-form"].reset();
                     }
                 } else {
                     alert(Error(`Código ${http_request.status} recibido.`))

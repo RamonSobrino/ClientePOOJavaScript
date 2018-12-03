@@ -117,31 +117,45 @@ function mostrarFoodEstablishmentId(){
 function mostrarLocalBusinessActualizar(){
     ocultarPaneles();
     document.getElementById("LocalBusiness-actualizar").style.display='block';
+    document.getElementById("LocalBusiness-actualizar-form-div").style.display='block';
+    document.getElementById("LocalBusiness-actualizar-contenido").style.display='none';
 }
 
 function mostrarFoodEstablishmentActualizar(){
     ocultarPaneles();
     document.getElementById("FoodEstablishment-actualizar").style.display='block';
+    document.getElementById("FoodEstablishment-actualizar-form-div").style.display='block';
+    document.getElementById("FoodEstablishment-actualizar-contenido").style.display='none';
 }
+
 
 function mostrarLocalBusinessAgregar(){
     ocultarPaneles();
     document.getElementById("LocalBusiness-agregar").style.display='block';
+    document.getElementById("LocalBusiness-agregar-form-div").style.display='block';
+    document.getElementById("LocalBusiness-agregar-contenido").style.display='none';
 }
 
 function mostrarFoodEstablishmentAgregar(){
     ocultarPaneles();
     document.getElementById("FoodEstablishment-agregar").style.display='block';
+    document.getElementById("FoodEstablishment-agregar-form-div").style.display='block';
+    document.getElementById("FoodEstablishment-agregar-contenido").style.display='none';
 }
+
 
 function mostrarLocalBusinessDelete(){
     ocultarPaneles();
     document.getElementById("LocalBusiness-borrar").style.display='block';
+    document.getElementById("LocalBusiness-borrar-formulario").style.display='block';
+    document.getElementById("LocalBusiness-borrar-contenido").style.display='none';
 }
 
 function mostrarFoodEstablishmentDelete(){
     ocultarPaneles();
     document.getElementById("FoodEstablishment-borrar").style.display='block';
+    document.getElementById("FoodEstablishment-borrar-formulario").style.display='block';
+    document.getElementById("FoodEstablishment-borrar-contenido").style.display='none';
 }
 
 

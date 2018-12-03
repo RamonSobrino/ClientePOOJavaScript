@@ -109,3 +109,44 @@
   #opciones-servidor{
     display: none; 
   }
+
+  .contenido-section section{
+    background-color:  #818181;
+    align-self: center;
+    margin: 2em;
+    width: 80%;
+  }
+
+  .contenido-section section h3{
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .contenido-section section p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .main{
+    background-color: aliceblue;
+  }
+
+  .general-section section{
+    align-self: center;
+    margin: 2em;
+    width: 80%;
+  }
+  .general-section section h3{
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .general-section section table, th, td{
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkblue;
+  }
+
+  .general-section section p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
